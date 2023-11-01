@@ -11,3 +11,30 @@ Data sources yang digunakan pada proyek ini hanya satu saja yakni [Dapodik Websi
 
 ## Requirements
 Python, Airflow, Docker, GCP Account
+
+## Batasan:
+Data yang diambil hanya pada Kab. Merauke (Papua Selatan) saja.
+
+## Data Model
+### Source (Raw Data)
+Data: Semua sekolah di semua kecamatan di Kabupaten Merauke.
+<img width="1172" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e0f23100-b354-4fe0-b023-c67aada0dbc0">
+<img width="1172" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/84e5b06d-d761-40ce-8437-4f78fa7c56a6">
+
+### Result
+<img width="991" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/0e430d81-5518-4d58-984f-92bfb51aca8e">
+
+## DAG Pipeline Explanation (Airflow)
+DAG yang digunakan hanya satu saja dalam proyek ini yakni "bq_airflow"
+<p><img width="297" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/6a7aef3a-acf0-4ce6-9dd7-5232fd38a720"></p>
+
+### Tasks
+Task pada DAG yang digunakan ada tiga, yakni: start, data_processing_task, dan end 
+<p></p><img width="389" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/707c4658-e5e4-4952-bd6a-5b156aac88dc"></p>
+
+Adapun ilustrasi task-task pada DAG tersebut seperti gambar di bawah ini:
+<img width="861" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/4556ce4f-f0c0-40d7-9ce1-f74026cff7fc">
+
+### data_processing_task
+
+
