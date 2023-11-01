@@ -80,3 +80,6 @@ Logic:
 <p><img width="912" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5af2d7ee-c7e1-4712-b3fd-4320ae803bf9">
 </p>
 
+
+# Attachment
+Script: https://github.com/arrlanyhars/edtech-airflow/blob/main/dag_pipeline_airflow.py
