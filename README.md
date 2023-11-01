@@ -1,4 +1,4 @@
-# Dokumentasi Pipeline DE
+# Data Engineering Pipeline Documentation: Efficient Data Scraping: Parsing JSON API with Python in Airflow
 
 ## Overview
 In this project, broadly speaking, I retrieve data from an external source, namely the [Dapodik Website](https://dapo.kemdikbud.go.id/), and then store it in BigQuery.
