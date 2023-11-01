@@ -88,4 +88,4 @@ Logic:
 
 # Attachment
 Script: https://github.com/arrlanyhars/edtech-airflow/blob/main/dag_pipeline_airflow.py
-<p>Website's Url: https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100</p>
+<p>Website's Url: https://dapo.kemdikbud.go.id/sp/2/370100</p>
