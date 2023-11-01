@@ -38,5 +38,10 @@ Adapun ilustrasi task-task pada DAG tersebut seperti gambar di bawah ini:
 
 ### data_processing_task
 #### Extract
-Dilakukan extract data dengan 2x looping, yakni looping pada Nama Kecamatan di Kabupaten Merauke dan looping pada semua sekolah di masing-masing kecamatan,
+Dilakukan extract data dengan dua kali looping, yakni looping pertama pada Nama Kecamatan di Kabupaten Merauke dan looping kedua pada semua sekolah di masing-masing kecamatan, seperti di bawah ini:
+<img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fb66a6b6-8190-41f7-8d63-e599d230331f">
 
+#### First Looping
+<img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e0155323-28d7-414b-81fc-221d23da7c53">
+Perhatikan url "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". 6 digit terakhir pada url merupakan kode kecamatan. Maka dari itu looping yang dilakukan adalah pada kode-kode tersebut. Adapun data yang dilooping untuk semua kecamatan disimpan dalam variabel subdistrict_codes.
+<img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/704c2091-6742-4278-a040-e9be334b5ec2">
