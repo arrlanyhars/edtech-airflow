@@ -41,7 +41,35 @@ Adapun ilustrasi task-task pada DAG tersebut seperti gambar di bawah ini:
 Dilakukan extract data dengan dua kali looping, yakni looping pertama pada Nama Kecamatan di Kabupaten Merauke dan looping kedua pada semua sekolah di masing-masing kecamatan, seperti di bawah ini:
 <img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fb66a6b6-8190-41f7-8d63-e599d230331f">
 
-#### First Looping
-<img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e0155323-28d7-414b-81fc-221d23da7c53">
-Perhatikan url "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". 6 digit terakhir pada url merupakan kode kecamatan. Maka dari itu looping yang dilakukan adalah pada kode-kode tersebut. Adapun data yang dilooping untuk semua kecamatan disimpan dalam variabel subdistrict_codes.
-<img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/704c2091-6742-4278-a040-e9be334b5ec2">
+##### First Looping
+<img width="727" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/d7ea2266-58e7-421f-81c4-58a5a2c19732">
+<p>Perhatikan url "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". 6 digit terakhir pada url merupakan kode kecamatan. Maka dari itu looping yang dilakukan adalah pada kode-kode tersebut. Adapun data yang dilooping untuk semua kecamatan disimpan dalam variabel subdistrict_codes.</p>
+<p><img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/704c2091-6742-4278-a040-e9be334b5ec2"></p>
+
+##### Second Looping
+<img width="820" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ef544970-5926-4245-9eb5-2699529b36df">
+<p>Sedangkan untuk looping kedua adalah pengambilan data-data dari masing-masing sekolah pada tiap-tiap kecamatan yang meliputi "nama","npsn","bentuk_pendidikan","status_sekolah","pd","sinkron_terakhir","induk_provinsi", dan "induk_kabupaten".</p>
+
+##### Menyimpan ke Dataframe
+<img width="434" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e8ba50bb-ab41-411b-858e-3e341b2973d5">
+Hasil ekstraksi kemudian disimpan ke dalam dataframe virtual. Selain itu dilakukan juga pengubahan nama kolom agar lebih mudah dipahami.
+
+#### Transfrom
+Proses transformasi yang dilakukan pada proyek ini adalah melakukan validasi data, yakni apakah data tersebut sudah siap digunakan oleh Data Analyst atau belum.
+##### Cek Null Value dan Tipe Kolom
+<img width="353" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5f0926bf-1443-4940-a053-2a9dec8d8539">
+<p>Pada null value, ternyata pada kolom "Last_Sync" terdapat data kosong. Setelah dilakukan pengecekan ke Website asli, ternyata ada value berisi "-" pada beberapa data di kolom "Last_Sync". Selain itu, tipe data pada kolom "Last_Sync" adalah string, yang mana tipe yang diinginkan adalah bersifat date. Sedangkan untuk kolom yang lain sudah dinilai aman.</p>
+
+##### Proses Transformasi
+  - Untuk null value diubah menjadi 'Last Sync is Null'.
+  - Untuk string pada kolom "Last_Sync" diubah ke datetime sesuai format BigQuery.
+<p><img width="609" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/15770c17-cf66-4d91-82d5-84d86253d0bb"></p>
+
+##### Cek Ulang Null Value dan Tipe Kolom
+<img width="363" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/3e1f94f4-43aa-4863-9812-7d04d3785371">
+<p>Pada tahapan ini null value sudah hilang, sedangkan tipe kolom "Last_Sync" masih string karena di dalam kolom tersebut ada value "Last Sync is Null" yang merupakan penanda bahwa value sebelumnya adalah null. Berikut merupakan contoh hasil data yang sudah divalidasi, terlihat format kolom "Last_Sync" sudah sesuai dengan format pada BigQuery.</p>
+<p>Format "Last_Sync" sebelum transformasi</p>
+<p><img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/67c4ad07-9973-4ebb-b5b3-132d94cbbbac"></p>
+<p>Format "Last_Sync" setelah transformasi</p>
+<p><<img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ec8dcb66-0430-4f95-971b-9bca11415041"></p>
+
