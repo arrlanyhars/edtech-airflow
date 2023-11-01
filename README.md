@@ -59,6 +59,8 @@ Hasil ekstraksi kemudian disimpan ke dalam dataframe virtual. Selain itu dilakuk
 
 #### Transfrom
 Proses transformasi yang dilakukan pada proyek ini adalah melakukan validasi data, yakni apakah data tersebut sudah siap digunakan oleh Data Analyst atau belum.
+<p><img width="993" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/0f047be0-1599-4cab-af30-9e673f2c972c"></p>
+
 ##### Cek Null Value dan Tipe Kolom
 <img width="353" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5f0926bf-1443-4940-a053-2a9dec8d8539">
 <p>Pada null value, ternyata pada kolom "Last_Sync" terdapat data kosong. Setelah dilakukan pengecekan ke Website asli, ternyata ada value berisi "-" pada beberapa data di kolom "Last_Sync". Selain itu, tipe data pada kolom "Last_Sync" adalah string, yang mana tipe yang diinginkan adalah bersifat date. Sedangkan untuk kolom yang lain sudah dinilai aman.</p>
@@ -86,4 +88,4 @@ Logic:
 
 # Attachment
 Script: https://github.com/arrlanyhars/edtech-airflow/blob/main/dag_pipeline_airflow.py
-Website's Url: https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100
+<p>Website's Url: https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100</p>
