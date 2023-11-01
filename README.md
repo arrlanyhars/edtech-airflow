@@ -43,48 +43,47 @@ The illustration of the tasks in the DAG is as follows:
 ### data_processing_task
 #### Extract
 Data extraction is performed with two nested loops. The first loop iterates through the district names in Merauke Regency, and the second loop iterates through all the schools in each district, as shown below:
-<img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fb66a6b6-8190-41f7-8d63-e599d230331f">
+<img width="834" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a182b10-8f44-44c0-8bb8-51a61dff7aa2">
 
 ##### First Looping
-<img width="834" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a182b10-8f44-44c0-8bb8-51a61dff7aa2">
+<img width="737" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/f24b78d9-a629-4ad8-8b6a-31da33d5f6fc">
 <p>Please take note of the URL "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". The last 6 digits in the URL represent the district code. Therefore, the looping is performed based on these codes. The data looped for all districts is stored in the subdistrict_codes variable.</p>
 <p><img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/bb25dbc4-a81c-436e-bb9b-3c4ffde4bfca"></p>
 
 ##### Second Looping
-<img width="820" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ef544970-5926-4245-9eb5-2699529b36df">
+<img width="763" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/8fdc1d93-6205-4f21-ac9e-152b3efafd19">
 <p>Meanwhile, for the second loop, it involves retrieving data from each school within every district, encompassing "nama","npsn","bentuk_pendidikan","status_sekolah","pd","sinkron_terakhir","induk_provinsi", dan "induk_kabupaten".</p>
 
 ##### Storing Data to Virtual Dataframe
-<img width="434" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e8ba50bb-ab41-411b-858e-3e341b2973d5">
+<img width="428" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/810ec68b-5dea-4178-a618-cad073385dcf">
 <p>The extraction results are then stored in a virtual dataframe. Additionally, column names are modified for better comprehension.</p>
 
 #### Transfrom
 The transformation process in this project involves data validation, which checks whether the data is ready for use by the Data Analyst or not.
-<p><img width="993" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/0f047be0-1599-4cab-af30-9e673f2c972c"></p>
+<p><img width="998" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/9ebfb6d7-0499-45a3-8cfd-cd771fffefe3"></p>
 
 ##### Check Null Values and Column Types
-<img width="353" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5f0926bf-1443-4940-a053-2a9dec8d8539">
+<img width="363" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a977c8a-17df-4520-b83c-790972f784b3">
 <p>In the case of null values, it turns out that in the "Last_Sync" column, there are empty data fields. After checking the original website, it appears that some data in the "Last_Sync" column contains a "-". Additionally, the data type in the "Last_Sync" column is currently a string, whereas the desired type is a date. Meanwhile, the other columns are considered correct.</p>
 
 ##### Transformation Process
   - For null values, they are changed to 'Last Sync is Null'.
   - For strings in the "Last_Sync" column, they are converted to datetime according to the BigQuery format.
-<p><img width="609" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/15770c17-cf66-4d91-82d5-84d86253d0bb"></p>
+<p><img width="613" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/af38db56-0e80-4566-aa62-8062049e8fe5"></p>
 
 ##### Recheck Null Values and Column Types
-<img width="363" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/3e1f94f4-43aa-4863-9812-7d04d3785371">
+<img width="358" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/4b1dbe38-6666-47f3-9557-07d5dd1484ae">
 <p>At this stage, null values have been addressed, but the data type of the "Last_Sync" column remains as a string because there are values such as "Last Sync is Null," which serve as indicators that the previous value was null. Below is an example of validated data, and it is evident that the format of the "Last_Sync" column now aligns with the BigQuery format.</p>
 <p>Format "Last_Sync" sebelum transformasi</p>
-<p><img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/67c4ad07-9973-4ebb-b5b3-132d94cbbbac"></p>
+<p><img width="875" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/be6be036-5c15-49c4-8553-c01a929ad148"></p>
 <p>Format "Last_Sync" setelah transformasi</p>
-<p><img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ec8dcb66-0430-4f95-971b-9bca11415041"></p>
+<p><img width="942" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fe41df3d-1ba5-4674-9b53-d57973979470"></p>
 
 #### Load
 Script:
-<p><img width="922" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ddc8736e-19f3-4502-b9e4-871b54ee904a"></p>
+<p><img width="739" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/1e2e1c5f-7c70-44e0-93b0-bb84a73ccae9"></p>
 Logic:
-<p><img width="912" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5af2d7ee-c7e1-4712-b3fd-4320ae803bf9">
-</p>
+<p><img width="978" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/a4f9ca4a-6c7b-49cf-8694-6774677bc459"></p>
 
 
 # Attachment
