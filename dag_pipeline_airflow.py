@@ -97,8 +97,7 @@ def extract_and_transform_data():
 
 	#LOAD
 
-	destination_table_id  = 
-"sandbox-data-401207.technical_test_de.ArryandaMaulani_PapuaSelatanKabMerauke_technicalTestSkolla"
+	destination_table_id  = "sandbox-data-401207.technical_test_de.ArryandaMaulani_PapuaSelatanKabMerauke_technicalTestSkolla"
 	dataset_ref = client.dataset("technical_test_de", project="sandbox-data-401207")
 	table_ref = dataset_ref.table("ArryandaMaulani_PapuaSelatanKabMerauke_technicalTestSkolla")
 	
@@ -111,8 +110,7 @@ def extract_and_transform_data():
 	
 	if available == 1:
 		query = f"""
-			DROP TABLE 
-`sandbox-data-401207.technical_test_de.ArryandaMaulani_PapuaSelatanKabMerauke_technicalTestSkolla`
+			DROP TABLE `sandbox-data-401207.technical_test_de.ArryandaMaulani_PapuaSelatanKabMerauke_technicalTestSkolla`
 		"""
 		client.query(query).result
 	else:
@@ -144,4 +142,3 @@ with DAG(
 
 	if __name__ == "__main__":
         	dag.cli()
-
