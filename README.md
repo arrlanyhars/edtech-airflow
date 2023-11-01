@@ -41,6 +41,9 @@ The illustration of the tasks in the DAG is as follows:
 <p><img width="950" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/c32f9c8f-1765-470d-acfe-9b9a2317fb92"></p>
 
 ### data_processing_task
+#### One of the JSON APIs used displays as follows:
+<img width="1565" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/37146a77-4ef4-44da-93ee-7ae64c6f457d">
+
 #### Extract
 Data extraction is performed with two nested loops. The first loop iterates through the district names in Merauke Regency, and the second loop iterates through all the schools in each district, as shown below:
 <img width="834" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a182b10-8f44-44c0-8bb8-51a61dff7aa2">
