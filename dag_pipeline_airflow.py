@@ -94,3 +94,28 @@ def extract_and_transform_data():
   		client.load_table_from_dataframe(dfx, destination_table_id)
   
   	client.load_table_from_dataframe(dfx, destination_table_id)
+
+default_args = {
+    	'owner': 'bq-airflow'
+}
+
+with DAG(
+	dag_id = "bq_data_sekolah",
+	default_args=default_args,
+	schedule_interval="0 */1 * * *",
+	start_date=pendulum.datetime(2023, 11, 1, tz="Asia/Bangkok"),
+) as dag:
+	start = DummyOperator(task_id="start")
+	
+	data_processing_task = PythonOperator(
+		task_id='extract_and_transform_data',
+        	python_callable=extract_and_transform_data,
+        	dag=dag,
+    	)
+	
+	end = DummyOperator(task_id="end")
+
+	start >> data_processing_task >> end
+
+	if __name__ == "__main__":
+        	dag.cli()
