@@ -74,9 +74,9 @@ The transformation process in this project involves data validation, which check
 ##### Recheck Null Values and Column Types
 <img width="358" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/4b1dbe38-6666-47f3-9557-07d5dd1484ae">
 <p>At this stage, null values have been addressed, but the data type of the "Last_Sync" column remains as a string because there are values such as "Last Sync is Null," which serve as indicators that the previous value was null. Below is an example of validated data, and it is evident that the format of the "Last_Sync" column now aligns with the BigQuery format.</p>
-<p>Format "Last_Sync" sebelum transformasi</p>
+<p>The format of "Last_Sync" before transformation.</p>
 <p><img width="875" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/be6be036-5c15-49c4-8553-c01a929ad148"></p>
-<p>Format "Last_Sync" setelah transformasi</p>
+<p>The format of "Last_Sync" after transformation.</p>
 <p><img width="942" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fe41df3d-1ba5-4674-9b53-d57973979470"></p>
 
 #### Load
