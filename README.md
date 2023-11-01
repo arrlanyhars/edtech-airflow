@@ -28,17 +28,17 @@ The data includes all schools in all districts within Merauke Regency.
 
 ## DAG Pipeline Explanation (Airflow)
 Only one DAG is used in this project, which is named "bq_data_sekolah."
-<p><img width="297" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/6a7aef3a-acf0-4ce6-9dd7-5232fd38a720"></p>
-<p>The script runs every hour using a batch system. However, due to the small amount of data, this project utilizes a "replace" system for the target table.</p>
-<p><img width="447" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ae19ff6e-2f17-4e15-8994-32750593488e">
+<p><img width="299" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5292db76-c52d-4147-b351-fc8ebbd05e37">
 </p>
+<p>The script runs every hour using a batch system. However, due to the small amount of data, this project utilizes a "replace" system for the target table.</p>
+<p><img width="445" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/86ef4abb-3171-41f5-8c45-91fa9bbc007c"></p>
 
 ### Tasks
 The DAG used in this project consists of three tasks: "start," "data_processing_task," and "end."
-<p></p><img width="389" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/707c4658-e5e4-4952-bd6a-5b156aac88dc"></p>
+<p><img width="389" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/707c4658-e5e4-4952-bd6a-5b156aac88dc"></p>
 
 The illustration of the tasks in the DAG is as follows:
-<p><img width="981" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/8447cd4a-aa79-43b9-8c8d-55e5e53f0fe9"></p>
+<p><img width="307" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7bc11a97-57a0-4153-9729-3e0bf45cb3df"></p>
 
 ### data_processing_task
 #### Extract
