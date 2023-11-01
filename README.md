@@ -28,6 +28,9 @@ Data: Semua sekolah di semua kecamatan di Kabupaten Merauke.
 ## DAG Pipeline Explanation (Airflow)
 DAG yang digunakan hanya satu saja dalam proyek ini yakni "bq_data_sekolah"
 <p><img width="297" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/6a7aef3a-acf0-4ce6-9dd7-5232fd38a720"></p>
+<p>Script run tiap satu jam sekali dengan sistem batch. Namun karena data sedikit, proyek ini menjalankan sistem "replace" pada tabel tujuan.</p>
+<p><img width="447" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ae19ff6e-2f17-4e15-8994-32750593488e">
+</p>
 
 ### Tasks
 Task pada DAG yang digunakan ada tiga, yakni: start, data_processing_task, dan end 
