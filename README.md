@@ -6,7 +6,7 @@ In this project, broadly speaking, I retrieve data from an external source, name
 ## Pipeline
 As for the project pipeline, it can be illustrated as shown below.
 <img width="1023" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/cfd05b32-6144-4e0f-a0c6-c954dd48ec6f">
-<p>So, this project is limited to the "Data Sources" and "Infrastructure System" aspects because the "End System" is the responsibility of the data analyst. Currently, I am working as a data engineer. The only data source used in this project is the [Dapodik Website](https://dapo.kemdikbud.go.id/) . However, in a very large project, there could be a wide variety of data sources used. Data is extracted using the Python programming language exclusively, and the method employed is parsing JSON APIs. After extraction, the data is transformed to ensure its validity and then transferred to BigQuery.</p>
+<p>So, this project is limited to the "Data Sources" and "Infrastructure System" aspects because the "End System" is the responsibility of the data analyst. Currently, I am working as a data engineer. The only data source used in this project is the Dapodik Website. However, in a very large project, there could be a wide variety of data sources used. Data is extracted using the Python programming language exclusively, and the method employed is parsing JSON APIs. After extraction, the data is transformed to ensure its validity and then transferred to BigQuery.</p>
 
 ## Requirements
   - Tools: Python, Airflow, Docker, and GCP Account
