@@ -55,7 +55,7 @@ Data extraction is performed with two nested loops. The first loop iterates thro
 
 ##### Storing Data to Virtual Dataframe
 <img width="434" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e8ba50bb-ab41-411b-858e-3e341b2973d5">
-The extraction results are then stored in a virtual dataframe. Additionally, column names are modified for better comprehension.
+<p>The extraction results are then stored in a virtual dataframe. Additionally, column names are modified for better comprehension.</p>
 
 #### Transfrom
 The transformation process in this project involves data validation, which checks whether the data is ready for use by the Data Analyst or not.
