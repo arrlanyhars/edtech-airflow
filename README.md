@@ -18,6 +18,7 @@ The data is only extracted from Kab. Merauke (Southern Papua).
 ## Data Model
 ### Source (Raw Data)
 The data includes all schools in all districts within Merauke Regency.
+<p>Url link: https://dapo.kemdikbud.go.id/sp/2/370100</p>
 <img width="1172" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/e0f23100-b354-4fe0-b023-c67aada0dbc0">
 <img width="1172" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/84e5b06d-d761-40ce-8437-4f78fa7c56a6">
 
