@@ -22,9 +22,9 @@ The data includes all schools in all districts within Merauke Regency.
 <img width="1160" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/d33e5dda-7dfd-43ff-9c14-7cf81afcdf69">
 <img width="1160" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5eadbd33-5cd9-4e86-b8bb-648d3cd64337">
 
-
 ### Result
-<img width="991" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/0e430d81-5518-4d58-984f-92bfb51aca8e">
+<img width="1000" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/02dca743-4f6d-47d3-b86a-792abb1206b7">
+
 
 ## DAG Pipeline Explanation (Airflow)
 Only one DAG is used in this project, which is named "bq_data_sekolah."
