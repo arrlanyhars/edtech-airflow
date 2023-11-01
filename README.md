@@ -71,5 +71,12 @@ Proses transformasi yang dilakukan pada proyek ini adalah melakukan validasi dat
 <p>Format "Last_Sync" sebelum transformasi</p>
 <p><img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/67c4ad07-9973-4ebb-b5b3-132d94cbbbac"></p>
 <p>Format "Last_Sync" setelah transformasi</p>
-<p><<img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ec8dcb66-0430-4f95-971b-9bca11415041"></p>
+<p><img width="863" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ec8dcb66-0430-4f95-971b-9bca11415041"></p>
+
+#### Load
+Script:
+<p><img width="922" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ddc8736e-19f3-4502-b9e4-871b54ee904a"></p>
+Logic:
+<p><img width="912" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/5af2d7ee-c7e1-4712-b3fd-4320ae803bf9">
+</p>
 
