@@ -46,9 +46,9 @@ Data extraction is performed with two nested loops. The first loop iterates thro
 <img width="688" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/fb66a6b6-8190-41f7-8d63-e599d230331f">
 
 ##### First Looping
-<img width="727" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/d7ea2266-58e7-421f-81c4-58a5a2c19732">
+<img width="834" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a182b10-8f44-44c0-8bb8-51a61dff7aa2">
 <p>Please take note of the URL "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". The last 6 digits in the URL represent the district code. Therefore, the looping is performed based on these codes. The data looped for all districts is stored in the subdistrict_codes variable.</p>
-<p><img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/704c2091-6742-4278-a040-e9be334b5ec2"></p>
+<p><img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/bb25dbc4-a81c-436e-bb9b-3c4ffde4bfca"></p>
 
 ##### Second Looping
 <img width="820" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/ef544970-5926-4245-9eb5-2699529b36df">
