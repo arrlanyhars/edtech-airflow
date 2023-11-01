@@ -63,7 +63,14 @@ def extract_and_transform_data():
 			json_data = response.json()
 			if isinstance(json_data, list):
 				for item in json_data:
-					selected_columns = ["nama", "npsn", "bentuk_pendidikan","status_sekolah","pd","sinkron_terakhir","induk_provinsi","induk_kabupaten"]
+					selected_columns = ["nama",
+							    "npsn",
+							    "bentuk_pendidikan",
+							    "status_sekolah",
+							    "pd",
+							    "sinkron_terakhir",
+							    "induk_provinsi",
+							    "induk_kabupaten"]
 					df = pd.DataFrame([{col: item[col] for col in selected_columns} for item in json_data])
 			else:
 	      			print("Data isn't json array.")
