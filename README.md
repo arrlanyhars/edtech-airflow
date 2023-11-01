@@ -37,7 +37,7 @@ The DAG used in this project consists of three tasks: "start," "data_processing_
 <p></p><img width="389" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/707c4658-e5e4-4952-bd6a-5b156aac88dc"></p>
 
 The illustration of the tasks in the DAG is as follows:
-<img width="861" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/4556ce4f-f0c0-40d7-9ce1-f74026cff7fc">
+<p><img width="981" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/8447cd4a-aa79-43b9-8c8d-55e5e53f0fe9"></p>
 
 ### data_processing_task
 #### Extract
