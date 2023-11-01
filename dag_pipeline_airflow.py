@@ -16,15 +16,15 @@ import os
 
 GOOGLE_CLOUD_CREDENTIALS = {
   "type": "service_account",
-  "project_id": "sandbox-data-401207",
-  "private_key_id": "4c2d814d3cffb546b3b98b9cb36c50d4cddc9fde",
-  "private_key": "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC0pYRdrts08gU7\n1Hq4vUE2kB9U1rmNSuoWy2i5qMMVYyZmIYXKQYZ/V0bFQR6z/OTdg9fo5fwjRwUW\nTVE9BoQ4Ke5h4PPUd73zKvKlgNU43eg6INcZRyRmE4vHe3quG/OA3sdhaevS9phP\nhIcOWxkByX3UPhEmurR/dRh9PXN2CyoB/aYAdBPeL+KHf/CNFVdX/2CLLszJUjcM\noIvyuaA7W3nQmad8FoPorvtCO9+B7PzDbGP522WS7ms4A9Oj0IW9n2NoYffEsi7Z\nylASofF4LuLAv60+KWKrlu+J+XHCRrhDAzJ2eKtsCjVtokqbDCd50J7gJg4MrAoz\nUAFjJeKxAgMBAAECggEACyHnIBnaPu9KRMdhn7hkCC+GCsWnzi4HcourAsQEb7E6\nSNF4jAARQJA5l4bdlER5uy/4koz3xpnGFbuCjeL0q3xkCSqihB2z+kQTi4D+wuAk\nA08KSm/Arby3IL46j3fAABlaiqWLJ6dUOBRH+WnCRwKqizWe+3bGkFNARNmQX74S\nYImhcz9k1OpHVwzSROnzjSf8NDcQQGV/WICZ4fidHDzFkpRu3wQXbuHQLjUrefXU\n8BC5QdnisVcIgk5f03RBRwlBRQLX6vYswUtC6PKc+xnKtS9HJB1+FL/d4GdGFICT\n3/bbyoZlbL0sl0lyMfjKj+ebaYgOg/uti0wXBqTv9QKBgQDa0qL4fQi6PFvNVtjU\nCYAYGu36TiT09qBTTSGevXnZgwqp1prkfh689LhuPQt1AgBiEZndpclzQ1r4Erj7\nVbrPWmq9w/8cinI09rh+hn+9vRnvFUSzlPRaXHopCg+D6QJRWx4PHxzf61KC3ZGN\nkZZ2VgmAq/fArVpUn99xfmr09QKBgQDTVnZ9OJIGwFNwzzfldtgjIsrL2WkVIrg+\nnJ79x2K6eub0PiJ7l00ExZSltTCQFE6a/IMxTqhLk15nwyF6LAJ96HTqt0iqp5Gm\nqciUOV2tsAkQMexByPybRRW7R3F3E9+UHPtav3lWAiU5Ll6T116uQlW/ewhQspSI\nPZ9aJKhBTQKBgQCK2+e3MAD9zZej8lyeEXlL0qr5j+U73dVXhzayeSJ9uP5nUFvy\na2YuGk1/BxXiJmb/1JODZ9UyY6eyjI7+TyTAuGvMCDg3cFOQ8I+bGtatHPb8FM8H\n9popTU3oBQ5bct2ZquykQ+Ya4kX17YyT/bMxXN+i233YsykDUoCEkOhmkQKBgQCs\nSIYbmuxgGJVtF2Bn7bRRIGHWQIxLsJwmXqO2Gr6/asWwQp71xegBhdiiJc1LB2L1\nMfj5TzgfNCn3yLkX0ZzOa5w0Y+oXRLeV+D8Npp5Zo3IgA7KoBmL3aSBIJfu3qTnQ\nkrfNyN3vYZxauxRazW3f/S/OA0xKDOrNDf9ECzIm2QKBgGRxuPQqKnzqH60YdrH2\npciLMD/HXumCzBFfx16rlAqq+eOCQ8GqP04GT9MqqfyBRvdSL+3BzYn1nlBH0Igi\nHKw2mu4FSxxedHZ2ui8GfLuOEGdDgBgKVytJ9ey5W4zTldnT59x56kQYExv4zvtf\nHPD8TmrcBSjyi9UFsIgmZhQL",
-  "client_email": "test-de-skolla@sandbox-data-401207.iam.gserviceaccount.com",
-  "client_id": "114411713664981792475",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/test-de-skolla%40sandbox-data-401207.iam.gserviceaccount.com",
+  "project_id": "xxx",
+  "private_key_id": "xxx",
+  "private_key": "xxx",
+  "client_email": "xxx",
+  "client_id": "xxx",
+  "auth_uri": "xxx",
+  "token_uri": "xxx",
+  "auth_provider_x509_cert_url": "xxx",
+  "client_x509_cert_url": "xxx",
   "universe_domain": "googleapis.com"
 }
 
