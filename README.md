@@ -35,10 +35,10 @@ Only one DAG is used in this project, which is named "bq_data_sekolah."
 
 ### Tasks
 The DAG used in this project consists of three tasks: "start," "data_processing_task," and "end."
-<p><img width="389" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/707c4658-e5e4-4952-bd6a-5b156aac88dc"></p>
+<p><img width="307" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/3789e7dd-dc30-4e6c-bdf2-5f581ac1218f"></p>
 
 The illustration of the tasks in the DAG is as follows:
-<p><img width="307" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7bc11a97-57a0-4153-9729-3e0bf45cb3df"></p>
+<p><img width="950" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/c32f9c8f-1765-470d-acfe-9b9a2317fb92"></p>
 
 ### data_processing_task
 #### Extract
