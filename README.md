@@ -48,12 +48,12 @@ The illustration of the tasks in the DAG is as follows:
 Data extraction is performed with two nested loops. The first loop iterates through the district names in Merauke Regency, and the second loop iterates through all the schools in each district, as shown below:
 <img width="834" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/7a182b10-8f44-44c0-8bb8-51a61dff7aa2">
 
-##### First Looping
+##### First Loop
 <img width="737" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/f24b78d9-a629-4ad8-8b6a-31da33d5f6fc">
-<p>Please take note of the URL "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". The last 6 digits in the URL represent the district code. Therefore, the looping is performed based on these codes. The data looped for all districts is stored in the subdistrict_codes variable.</p>
-<p><img width="163" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/bb25dbc4-a81c-436e-bb9b-3c4ffde4bfca"></p>
+<p>Please take note of the URL "https://dapo.kemdikbud.go.id/rekap/dataSekolah?id_level_wilayah=2&kode_wilayah=370100". The last 6 digits in the URL represent the district code. Therefore, the looping is performed based on these codes. The data looped for all districts is stored in the list_of_subdistrict_codes variable.</p>
+<p><img width="226" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/bc463fb7-c1b9-4016-8f92-c20e184ced2f"></p>
 
-##### Second Looping
+##### Second Loop
 <img width="763" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/8fdc1d93-6205-4f21-ac9e-152b3efafd19">
 <p>Meanwhile, for the second loop, it involves retrieving data from each school within every district, encompassing "nama","npsn","bentuk_pendidikan","status_sekolah","pd","sinkron_terakhir","induk_provinsi", dan "induk_kabupaten".</p>
 
