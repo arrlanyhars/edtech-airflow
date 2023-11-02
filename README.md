@@ -89,6 +89,6 @@ Logic:
 <p><img width="978" alt="image" src="https://github.com/arrlanyhars/edtech-airflow/assets/71999653/a4f9ca4a-6c7b-49cf-8694-6774677bc459"></p>
 
 
-# Attachment
+# Attachments
 Script: https://github.com/arrlanyhars/edtech-airflow/blob/main/dag_pipeline_airflow.py
 <p>Website's Url: https://dapo.kemdikbud.go.id/sp/2/370100</p>
